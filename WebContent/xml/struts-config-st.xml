@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="stSingleRuleForm" type="com.sdnx.st.sm.action.StRuleForm" />	
+		<form-bean name="testForm" type="com.sdnx.st.sm.model.StRule" />
+		<form-bean name="stOrgSpreadForm" type="com.sdnx.st.sm.action.StOrgSpreadMaintainForm" />
+		<form-bean name="stProductSpreadForm" type="com.sdnx.st.sm.action.StProductSpreadMaintainForm" />		
+		<form-bean name="stRuleForm" type="com.sdnx.st.sm.action.StRuleMaintainForm" />
+		<form-bean name="stSystemForm" type="com.sdnx.st.sm.action.StSystemMaintainForm" />
+		<form-bean name="stLimitIndustryForm" type="com.sdnx.st.sm.action.StLimitIndustryForm" />
+		<form-bean name="stLimitAmountForm" type="com.sdnx.st.sm.action.StLimitAmountParaMaintainForm" />
+		<form-bean name="stRateRulerMaintainForm" type="com.sdnx.st.sm.action.StRateRulerMaintainForm" />
+		<form-bean name="stTestForm" type="com.sdnx.st.sm.action.TestForm" />
+	</form-beans>
+	<action-mappings>
+		<action name="stSingleRuleForm" path="/StRuleMaintain"  type="com.sdnx.st.sm.action.StRuleMaintain" scope="request" parameter="operAtt" >
+			<forward name="admit"  path="/jsp/StAdmit.jsp" />
+			<forward name="limitAmount" path="/jsp/StLimitAmount.jsp" />
+			<forward name="product" path="/jsp/StProductSelect.jsp" />
+			<forward name="rate" path="/jsp/StRate.jsp"/>
+			<forward name="firstTrial" path="/jsp/StFirstTrial.jsp"/>
+			<forward name="lastTrial" path="/jsp/StLastTrial.jsp"/>
+			<forward name="process"  path="/jsp/StApprovalProcess.jsp" />
+		</action>
+		<action name="stOrgSpreadForm" path="/StOrgSpreadMaintain"  type="com.sdnx.st.sm.action.StOrgSpreadMaintain" scope="request" parameter="operAtt" >
+			<forward name="orgSpread"  path="/jsp/StOrgSpreadMaintain.jsp" />
+			<forward name="legalOrgSpread"  path="/jsp/StLegalOrgSpreadMaintain.jsp" />
+			<forward name="dotSpread"  path="/jsp/StDotSpreadMaintain.jsp" />
+			<forward name="productSpread"  path="/jsp/StProductSpreadMaintain.jsp" />
+		</action>
+		<action name="stProductSpreadForm" path="/StProductSpreadMaintain"  type="com.sdnx.st.sm.action.StProductSpreadMaintain" scope="request" parameter="operAtt" >
+			<forward name="productSpread"  path="/jsp/StProductSpreadMaintain.jsp" />
+		</action>
+		<action name="stSystemForm" path="/StSystemMaintain"  type="com.sdnx.st.sm.action.StSystemMaintain" scope="request" parameter="operAtt" >
+			<forward name="stRule"  path="/jsp/StRuleMaintain.jsp" />
+			<forward name="stLimitAmountAddProduct"  path="/jsp/StLimitAmountAddProduct.jsp" />
+			<forward name="stSystem"  path="/jsp/StSystemMaintain.jsp" />
+			<forward name="stModelEdit"  path="/jsp/StModelEdit.jsp" />
+			<forward name="stSystemCheck"  path="/jsp/StSystemMaintainCheck.jsp" />
+			<forward name="StModelCopy"  path="/jsp/StModelCopy.jsp" />
+			<forward name="RateResultQuery"  path="/jsp/RateResultQuery.jsp" />
+			<forward name="RateResultQueryByDept"  path="/jsp/RateResultQueryByDept.jsp" />
+			<forward name="RateResultQueryByManager"  path="/jsp/RateResultQueryByManager.jsp" />
+			<forward name="RateDetailInfo"  path="/jsp/RateDetailInfo.jsp" />
+			<forward name="RateScoreDetailInfo"  path="/jsp/RateScoreDetailInfo.jsp" />
+			<forward name="ruleStatisticsByOrg" path="/jsp/RuleStatisticsByOrg.jsp" />
+			<forward name="ruleStatisticsByDept" path="/jsp/RuleStatisticsByDept.jsp" />
+		</action>
+		<action name="stLimitIndustryForm" path="/StLimitIndustry"  type="com.sdnx.st.sm.action.StLimitIndustryMaintain" scope="request" parameter="operAtt">
+			<forward name="stLimitIndustry" path="/jsp/StLimitIndustry.jsp" /> 
+		</action>
+		<action name="stLimitAmountForm" path="/tLimitAmountParaMaintain"  type="com.sdnx.st.sm.action.StLimitAmountParaMaintain" scope="request" parameter="operAtt" >
+			<forward name="stLimitamount"  path="/jsp/StLimitamountMaintain.jsp" />
+			<forward name="stLimitCalculator"  path="/jsp/StLimitCalculatorMaintain.jsp" />
+			<forward name="stProductLimit" path="/jsp/StProductLimitMaintain.jsp" />
+		</action>
+		<action name="stRateRulerMaintainForm" path="/StRateRulerMaintain"  type="com.sdnx.st.sm.action.StRateRulerMaintain" scope="request" parameter="operAtt" >
+			<forward name="stRateRuler"  path="/jsp/stRateRuler.jsp" />
+		</action>
+		<action name="stTestForm" path="/StTest"  type="com.sdnx.st.sm.action.TestAction" scope="request" parameter="operAtt" >
+			<forward name="test"  path="/jsp/Test.jsp" />
+			<forward name="industry" path="/jsp/TestIndustrySelect.jsp" />
+		</action>
+	</action-mappings>
+	
+</struts-config>
